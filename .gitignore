@@ -1,0 +1,4 @@
+.env
+.env.prod
+cert.crt
+node_modules
