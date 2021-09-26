@@ -7,6 +7,7 @@ const Schema = new mongoose.Schema({
   powerSum: Number,
   powerAvg: Number,
   payPerFight: Number,
+  statTimestamp: Number,
   timestamp: Number,
   dailyMaxClaim: Number
 })

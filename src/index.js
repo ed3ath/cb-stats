@@ -22,7 +22,7 @@ const init = async (network) => {
   let powerSum = await getData(network, 3)
   let powerAvg = await getData(network, 4)
   let payPerFight = await getData(network, 5)
-  let timestamp = await getData(network, 6)
+  let statTimestamp = await getData(network, 6)
   let dailyMaxClaim = await getData(network, 7)
 
   console.log('Starting....')
@@ -42,7 +42,7 @@ const init = async (network) => {
     hourlyIncome = await getData(network, 1)
     hourlyFights = await getData(network, 2)
     powerSum = await getData(network, 3)
-    timestamp = await getData(network, 6)
+    statTimestamp = await getData(network, 6)
 
     await Vars.create({
       network,
@@ -51,8 +51,9 @@ const init = async (network) => {
       powerSum,
       powerAvg,
       payPerFight,
-      timestamp,
-      dailyMaxClaim
+      statTimestamp,
+      dailyMaxClaim,
+      timestamp: parseInt(new Date().getTime() / 1000)
     })
   }, 1000)
 }
